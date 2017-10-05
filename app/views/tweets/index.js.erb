@@ -1,5 +1,7 @@
 <%content=''%>
-<%if params[:q].blank?%>
+<%if !@error.blank?%>
+	<%content = @error%>
+<%elsif params[:q].blank?%>
 	<%content = "Search query cannot be blank."%>
 <%elsif @tweets.blank?%>
 	<%content = "No tweets found."%>
