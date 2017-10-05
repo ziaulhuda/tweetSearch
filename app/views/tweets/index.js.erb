@@ -1,0 +1,10 @@
+<%content=''%>
+<%if params[:q].blank?%>
+	<%content = "Search query cannot be blank."%>
+<%elsif @tweets.blank?%>
+	<%content = "No tweets found."%>
+<%else%>
+	<%content = render("tweets")%>
+<%end%>
+
+$("#tweetsContainer").html("<%=j content%>");

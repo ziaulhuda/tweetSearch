@@ -1,0 +1,9 @@
+<h1>Tweets Searching App</h1>
+
+<%= form_tag("/", method: "get", remote: true) do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+<br/><br/>
+<div id="tweetsContainer"></div>
